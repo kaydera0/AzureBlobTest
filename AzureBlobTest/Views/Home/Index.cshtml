@@ -1,0 +1,39 @@
+﻿@using AzureBlobTest.Services
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <div class="card" style="width: 18rem;">
+    <h1 class="display-4">Upload</h1>
+    <form asp-action="Upload" asp-controller="File" method="post" enctype="multipart/form-data">
+        <input type="file" name="file"/><br>
+        <input type="submit" value="Загрузить"/>
+    </form>
+        </div>
+    
+    <div class="card" style="width: 18rem;">
+        <h1 class="display-4">Download</h1>
+        <form asp-controller="File" asp-action="Download" method="get" enctype="multipart/form-data">
+            <input type="text" name="filename"/><br>
+            <input type="submit" value="Загрузить"/>
+        </form>
+    </div>
+    
+    <div class="card" style="width: 18rem;">
+        <h1 class="display-4">Delete</h1>
+        <form asp-controller="File" asp-action="Delete" method="get" enctype="multipart/form-data">
+            <input type="text" name="filename1"/><br>
+            <input type="submit" value="Delete"/>
+        </form>
+    </div>
+    
+    <div class="card" style="width: 18rem;">
+        <h1 class="display-4">List of items in Json</h1>
+        <form asp-controller="File" asp-action="ListBlobs" method="get" enctype="multipart/form-data">
+            <input type="submit" value="Get List"/>
+        </form>
+    </div>
+
+
+</div>
